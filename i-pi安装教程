@@ -1,0 +1,19 @@
+cd /home/yingbai
+unzip i-pi-main.zip
+mv i-pi-main i-pi
+ls /home/yingbai/i-pi
+
+source /public/software/hpc4you/anaconda3/etc/profile.d/conda.sh
+conda activate lammps-v2023.11.21
+source /home/yingbai/i-pi/env.sh
+
+python --version
+python -m ipi --help
+#此版本先检查一下是否有numpy库
+ls
+unzip i-pi-main.zip
+cd i-pi-main
+python3 --version
+python3 -c "import numpy; print(numpy.__version__)"
+source env.sh
+python3 -m ipi --help
