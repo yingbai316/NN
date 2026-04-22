@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH --job-name=NaOH75M_iPI
+#SBATCH --job-name=NaOH
 #SBATCH --partition=chem-lh
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=1
@@ -26,7 +26,7 @@ lmp=$(which lmp)
 echo "{\"init\",$(date -u)}" >> LIST
 grep '<step>' RESTART >> LIST 2>/dev/null
 
-if [ ! -f RESTART ]; then
+if [ ! -f "RESTART" ]; then
   cp input.xml RESTART
 fi
 
